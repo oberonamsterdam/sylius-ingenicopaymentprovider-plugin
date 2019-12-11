@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Acme\SyliusExamplePlugin;
+namespace Oberon\SyliusIngenicoPaymentProviderPlugin;
 
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class AcmeSyliusExamplePlugin extends Bundle
+final class OberonSyliusIngenicoPaymentProviderPlugin extends Bundle
 {
     use SyliusPluginTrait;
 }
