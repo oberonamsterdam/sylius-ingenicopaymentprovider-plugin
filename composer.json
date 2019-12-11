@@ -1,5 +1,5 @@
 {
-    "name": "oberon/sylius-ingenicopaymentprovider-plugin",
+    "name": "oberon-a/sylius-ingenicopaymentprovider-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Ingenico payment provider plugin for Sylius.",
