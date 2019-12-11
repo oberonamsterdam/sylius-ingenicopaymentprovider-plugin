@@ -2,7 +2,7 @@
     "name": "oberonamsterdam/sylius-ingenicopaymentprovider-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
-    "description": "Acme example plugin for Sylius.",
+    "description": "Ingenico payment provider plugin for Sylius.",
     "license": "MIT",
     "require": {
         "php": "^7.2",
@@ -36,8 +36,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Acme\\SyliusExamplePlugin\\": "src/",
-            "Tests\\Acme\\SyliusExamplePlugin\\": "tests/"
+            "Oberon\\SyliusIngenicoPaymentProviderPlugin\\": "src/"
         }
     },
     "autoload-dev": {
