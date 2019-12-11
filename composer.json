@@ -1,12 +1,11 @@
 {
-    "name": "sylius/plugin-skeleton",
+    "name": "oberonamsterdam/sylius-ingenicopaymentprovider-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Acme example plugin for Sylius.",
     "license": "MIT",
     "require": {
         "php": "^7.2",
-
         "sylius/sylius": "^1.6"
     },
     "require-dev": {
