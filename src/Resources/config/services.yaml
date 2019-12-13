@@ -1,0 +1,33 @@
+services:
+  oberon.sylius_ingenico_paymentprovider_plugin.form.type.ingenico_gateway_configuration:
+    class: Oberon\SyliusIngenicoPaymentProviderPlugin\Form\Type\IngenicoGatewayConfigurationType
+    tags:
+      - { name: sylius.gateway_configuration_type, type: ingenico_paymentprovider, label: oberon.sylius_ingenico_paymentprovider_plugin.ui.ingenico_paymentprovider }
+      - { name: form.type }
+
+  oberon.sylius_ingenico_paymentprovider_plugin.gateway_factory:
+    class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
+    arguments:
+      - Oberon\SyliusIngenicoPaymentProviderPlugin\IngenicoGatewayFactory
+    tags:
+      - { name: payum.gateway_factory_builder, factory: ingenico_paymentprovider, prepend: true }
+
+  oberon.sylius_ingenico_paymentprovider_plugin.action.ingenico_bridge:
+    class: Oberon\SyliusIngenicoPaymentProviderPlugin\Bridge\IngenicoBridge
+    tags:
+      - { name: payum.action, factory: ingenico_paymentprovider, prepend: true }
+
+  oberon.sylius_ingenico_paymentprovider_plugin.action.capture:
+    class: Oberon\SyliusIngenicoPaymentProviderPlugin\Action\CaptureAction
+    tags:
+      - { name: payum.action, factory: ingenico_paymentprovider, alias: payum.action.capture }
+
+  oberon.sylius_ingenico_paymentprovider_plugin.action.status:
+    class: Oberon\SyliusIngenicoPaymentProviderPlugin\Action\StatusAction
+    tags:
+      - { name: payum.action, factory: ingenico_paymentprovider, alias: payum.action.status }
+
+  oberon.sylius_ingenico_paymentprovider_plugin.action.convert_payment:
+    class: Oberon\SyliusIngenicoPaymentProviderPlugin\Action\ConvertPaymentAction
+    tags:
+      - { name: payum.action, factory: ingenico_paymentprovider, alias: payum.action.convert_payment }

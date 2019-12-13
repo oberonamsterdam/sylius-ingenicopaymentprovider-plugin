@@ -1,13 +1,23 @@
 {
     "name": "oberonamsterdam/sylius-ingenicopaymentprovider-plugin",
     "type": "sylius-plugin",
-    "keywords": ["sylius", "sylius-plugin"],
     "description": "Ingenico payment provider plugin for Sylius.",
     "license": "MIT",
     "require": {
         "php": "^7.2",
-        "sylius/sylius": "^1.6"
+        "sylius/sylius": "^1.6",
+        "ingenico-epayments/connect-sdk-php": "^6.5"
     },
+    "authors": [
+        {
+            "name": "Oberon",
+            "email": "contact@oberon.nl"
+        },
+        {
+            "name": "Raymond Kiekens",
+            "email": "raymond@oberon.nl"
+        }
+    ],
     "require-dev": {
         "behat/behat": "^3.4",
         "behat/mink": "^1.7@dev",
@@ -41,6 +51,9 @@
     },
     "autoload-dev": {
         "classmap": ["tests/Application/Kernel.php"]
+    },
+    "config": {
+        "bin-dir": "bin"
     },
     "extra": {
         "branch-alias": {
