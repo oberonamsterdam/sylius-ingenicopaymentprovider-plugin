@@ -1,11 +1,16 @@
 /vendor/
+.idea
 /node_modules/
 /composer.lock
 
 /etc/build/*
 !/etc/build/.gitignore
+!/etc/build/.gitkeep
 
 /tests/Application/yarn.lock
 
 /behat.yml
 /phpspec.yml
+
+/bin/*
+!/bin/.gitkeep
